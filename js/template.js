@@ -58,10 +58,9 @@
 	 * });
 	 */
 	Template.prototype.show = function (data) {
-		var i, l;
 		var view = '';
 
-		for (i = 0, l = data.length; i < l; i++) {
+		for (var i = 0; i < data.length; i++) {
 			var template = this.defaultTemplate;
 			var completed = '';
 			var checked = '';
