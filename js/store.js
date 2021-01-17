@@ -84,9 +84,7 @@
 		if (id) {
 			for (var i = 0; i < todos.length; i++) {
 				if (todos[i].id === id) {
-					for (var key in updateData) {
-						todos[i][key] = updateData[key];
-					}
+					Object.assign(todos[i], updateData);
 					break;
 				}
 			}
