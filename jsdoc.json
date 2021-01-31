@@ -1,0 +1,11 @@
+{
+  "plugins": ["plugins/markdown", "plugins/summarize"],
+  "source": {
+    "include": ["./js"]
+  },
+  "opts": {
+    "template": "node_modules/better-docs",
+    "destination": "./jsdoc", 
+    "readme": "./README.md"
+  }
+}

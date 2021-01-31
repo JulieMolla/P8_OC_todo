@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Home</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    API Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Namespaces</h3><ul><li><a href="app.html">app</a></li></ul><h3>Classes</h3><ul><li><a href="app.Controller.html">Controller</a></li><li><a href="app.Model.html">Model</a></li><li><a href="app.Store.html">Store</a></li><li><a href="app.Template.html">Template</a></li><li><a href="app.View.html">View</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p></p>
+                    <h1>Home</h1>
+                </header>
+                
+
+
+
+    
+
+
+    <h3> </h3>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <section>
+        <article><h1>Projet 8 - Reprenez et améliorez un projet existant</h1>
+<p>Cet avant-dernier projet de la formation &quot;Développeur Front End&quot; consite à reprendre un projet existant.</p>
+<p><img src="./docs/images/todo-welcome.png" alt="Image de l'application todo list"></p>
+<h2>Etape 1 : Corrigez les bugs</h2>
+<p>Plusieurs erreurs s'étaient insérées dans le code et ont été corrigées.</p>
+<ol>
+<li>Erreur de typographie dans <strong>controller.js</strong></li>
+</ol>
+<p><strong>Ligne 95</strong> du fichier <strong>controller.js</strong>: la fonction Controller.prototype.addItem comportait un &quot;d&quot; en trop.</p>
+<p><img src="./docs/images/bug_typo_controller.png" alt="Image de la correction de l'erreur de typographie"></p>
+<ol start="2">
+<li>Absence d'un id unique dans <strong>store.js</strong></li>
+</ol>
+<p>La <strong>fonction save</strong> générait un nouvel id sous forme d'une suite de chiffres. Cette génération d'id n'était pas assez unique.</p>
+<p>Une librairie a été utilisée afin de générer un <strong>UUID</strong> (Universally Unique Identifer).</p>
+<p>Plusieurs modifications ont été faites pour fixer ce bug.</p>
+<ul>
+<li>Suppression du code générant l'id</li>
+</ul>
+<p>Suppression des <strong>lignes 83 à 90</strong> dans <strong>store.js</strong></p>
+<p><img src="./docs/images/bug_id_store.png" alt="Image de la suppression du code de l'id"></p>
+<ul>
+<li>Ajout du script de la librairie UUIDV4</li>
+</ul>
+<p>Dans <strong>index.html</strong> ajout du <strong>script</strong></p>
+<p><img src="./docs/images/script_UUIDV4.png" alt="Image de l'ajout du script UUIDV4"></p>
+<ul>
+<li>Ajout de la fonction générant l'id</li>
+</ul>
+<p>Dans <strong>store.js</strong> ajout de la fonction permettant de générer un uuid</p>
+<p><img src="./docs/images/create_uuid.png" alt="Image de l'ajout de la fonction pour l'uuid"></p>
+<ul>
+<li>Suppression des parseInt</li>
+</ul>
+<p>Suppression de la <strong>ligne 55</strong> dans <strong>models.js</strong>, de la <strong>ligne 138</strong> dans <strong>view.js</strong> et de la <strong>ligne 107</strong> dans <strong>store.js</strong></p>
+<p><img src="./docs/images/parseInt_models.png" alt="Image de la suppression du parseInt dans models.js"></p>
+<p><img src="./docs/images/parseInt_view.png" alt="Image de la suppression du parseInt dans view.js"></p>
+<p><img src="./docs/images/parseInt_store.png" alt="Image de la suppression du parseInt dans store.js"></p>
+<ol start="3">
+<li>Erreur 404</li>
+</ol>
+<p>Une erreur 404 était générée dans la console.
+La <strong>ligne 48</strong> dans <strong>index.html</strong> a été supprimée</p>
+<p><img src="./docs/images/error404.png" alt="Image de l'erreur 404"></p>
+<ol start="4">
+<li>Bug click toggle-all</li>
+</ol>
+<p>Le click sur le &quot;toggle-all&quot; ne fonctionnait pas car le <strong>label for</strong> ne renvoyait à aucun <strong>id</strong>.
+Correction des <strong>lignes 17 à 19</strong> dans <strong>index.html</strong></p>
+<p><img src="./docs/images/toggle-all.png" alt="Image de la correction du toggle all"></p>
+<ol start="5">
+<li>
+<p>Refactorisation</p>
+<pre><code> Méthode trim() 
+</code></pre>
+</li>
+</ol>
+<p>Dans la <strong>fonction title</strong>, refactorisation avec la <strong>méthode trim()</strong> à la ligne <strong>124</strong> de <strong>controller.js</strong></p>
+<p><img src="./docs/images/methode_trim.png" alt="Image de la méthode trim()"></p>
+<pre><code>    Suppression forEach()
+</code></pre>
+<p>La boucle qui avait été créée, à la <strong>ligne 159</strong> de <strong>controller.js</strong> ne faisait qu'alourdir le code. L'insertion d'un <strong>console.log()</strong> permet de faire la même chose.</p>
+<p><img src="./docs/images/forEach.png" alt="Image de la boucle forEach"></p>
+<pre><code>    Suppression de l'assignation de la taille d'un tableau à une variable
+</code></pre>
+<p>Cela ne sert à rien d'assigner la taille d'un tableau à une variable. Le code a donc été refactorisé. Les <strong>lignes 61 et 64</strong> de <strong>template.js</strong> ont été corrigées.;</p>
+<p><img src="./docs/images/template.png" alt="Image de la suppression de l'assignation à l"></p>
+<pre><code>    Insertion de Object.assign
+</code></pre>
+<p>Refactorisation des <strong>lignes 87 à 89</strong> de <strong>store.js</strong> en insérant <strong>Object.assign</strong> afin d'insérer toutes les propriétés dans un seul objet.</p>
+<p><img src="./docs/images/object_assign.png" alt="Image de Object.assign"></p>
+<pre><code>    Méthode filter()
+</code></pre>
+<p>Dans <strong>Store.prototype.remove</strong>, refactorisation avec la <strong>méthode filter()</strong> à la <strong>ligne 118</strong> dans <strong>store.js</strong></p>
+<p><img src="./docs/images/filter.png" alt="Image de la méthode filter()"></p>
+<h2>Etape 2: où sont les tests ?!</h2>
+<p>Plusieurs tests ont été réalisés et se retrouvent dans <strong>ControllerSpec.js</strong></p>
+<p><strong>9</strong> tests <strong>effectués</strong> et <strong>1</strong> qui n'a <strong>pas</strong> été <strong>demandé</strong> mais qui pourrait être effectué.</p>
+<ol>
+<li>
+<p><strong>Pré-requis</strong></p>
+</li>
+<li>
+<p><strong>Un Test beforeEach - ligne 62</strong></p>
+<pre><code> Test de la fonction beforeEach
+</code></pre>
+</li>
+</ol>
+<p><img src="./docs/images/test_beforeEach.png" alt="Image du test beforeEach"></p>
+<ol start="3">
+<li>
+<p><strong>Cinq Tests describe('routing') - ligne 92 et suivantes</strong></p>
+<pre><code> 3.1 Test de la fonction describe('routing') pour toutes les entrées actives
+</code></pre>
+</li>
+</ol>
+<p><img src="./docs/images/test_describe_routing_active_entries.png" alt="Image du test describe('routing') - all active entries"></p>
+<pre><code>    3.2 Test de la fonction describe('routing') pour toutes les entrées complétées
+</code></pre>
+<p><img src="./docs/images/test_describe_routing_completed_entries.png" alt="Image du test describe('routing') - completed entries"></p>
+<pre><code>    3.3 Test de la fonction describe('routing') pour tous les filtres par défaut
+</code></pre>
+<p><img src="./docs/images/test_describe_routing_all_filter_by_default.png" alt="Image du test describe('routing') - all filter by default"></p>
+<pre><code>    3.4 Test de la fonction describe('routing') pour les filtres actifs
+</code></pre>
+<p><img src="./docs/images/test_describe_routing_active_filter.png" alt="Image du test describe('routing') - active filter"></p>
+<pre><code>    3.5 Test manquant de la **fonction describe('routing') pour les filtres complétés
+</code></pre>
+<p><img src="./docs/images/test_describe_routing_completed_filter.png" alt="Image du test describe('routing') - completed filter"></p>
+<ol start="4">
+<li>
+<p><strong>Deux Tests pour describe('toggle_all') - lignes 178 et suivantes</strong></p>
+<pre><code> 1. Test de la fonction describe('toggle all') pour tous les todos complétés
+</code></pre>
+</li>
+</ol>
+<p><img src="./docs/images/test_describe_toggle_all_completed.png" alt="Image du test describe('toggle all') - completed"></p>
+<pre><code>    2. Test de la fonction describe('toggle all') pour la mise à jour
+</code></pre>
+<p><img src="./docs/images/test_describe_toggle_update_view.png" alt="Image du test describe('toggle all') - update view"></p>
+<ol start="5">
+<li>
+<p><strong>Un Test pour describe('new todo') - ligne 219</strong></p>
+<pre><code> Test de la fonction describe('new todo') pour ajouter un nouveau todo
+</code></pre>
+</li>
+</ol>
+<p><img src="./docs/images/test_describe_newTodo_add_new_todo.png" alt="Image du test describe('new todo') - add new todo"></p>
+<ol start="6">
+<li>
+<p><strong>Un Test pour describe('element removal') - ligne 269</strong></p>
+<pre><code> Test de la fonction describe('element removal') pour modifier une entrée
+</code></pre>
+</li>
+</ol>
+<p><img src="./docs/images/test_describe_elementRemoval_remove_entry.png" alt="Image du test describe('element Removal') - remove entry"></p>
+<h2>Etape 3: optimisez la performance</h2>
+<p>Un <strong>audit de performance</strong> a été effectué tout en <strong>scalant</strong> par rapport au <a href="http://todolistme.net/">site concurrent</a>.</p>
+<blockquote>
+<p>Voir <a href="./docs/images/auditPerformance.pdf">l'audit de performance</a></p>
+</blockquote>
+<h2>Etape 4: améliorez le projet</h2>
+<p>Plusieurs documentations sont demandés afin d'améliorer le projet:</p>
+<blockquote>
+<p>Voir <a href="./docs/images/manuel_utilisation.pdf">la documentation utilisateur</a></p>
+</blockquote>
+<blockquote>
+<p>Voir <a href="">la documentation technique</a></p>
+</blockquote></article>
+    </section>
+
+
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by 
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+</body>
+</html>

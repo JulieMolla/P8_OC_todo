@@ -1,4 +1,5 @@
 /*global app, $on */
+/** @namespace app */
 (function () {
 	'use strict';
 
@@ -6,6 +7,8 @@
 	 * Sets up a brand new Todo list.
 	 *
 	 * @param {string} name The name of your new to do list.
+	 * 
+	 * @memberof app
 	 */
 	function Todo(name) {
 		this.storage = new app.Store(name);

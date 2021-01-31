@@ -7,6 +7,8 @@
 	 * @constructor
 	 * @param {object} model The model instance
 	 * @param {object} view The view instance
+	 * 
+	 * @memberof app
 	 */
 	function Controller(model, view) {
 		var self = this;

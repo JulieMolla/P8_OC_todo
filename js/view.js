@@ -11,6 +11,9 @@
 	     *     Takes a todo application event and registers the handler
 	     *   - render(command, parameterObject)
 	     *     Renders the given command with the options
+		 * 
+		 * @constructor
+		 * @memberof app
 	     */
 	function View(template) {
 		this.template = template;
@@ -92,6 +95,12 @@
 		});
 	};
 
+	/**
+	 * Renders the given command with the options
+	 * 
+	 * @param {*} viewCmd 'showEntries' | 'removeItem' | 'updateElementCount' | 'clearCompletedButton' | 'contentBlockVisibility' | 'toggleAll' | 'setFilter' | 'clearNewTodo' | 'elementComplete' | 'editItem' | 'editItemDone'
+	 * @param {*} parameter 
+	 */
 	View.prototype.render = function (viewCmd, parameter) {
 		var self = this;
 		var viewCommands = {
@@ -170,6 +179,12 @@
 		});
 	};
 
+	/**
+	 * Takes a todo application event and registers the handler
+	 * 
+	 * @param {*} event 'newTodo' | 'removeCompleted' | 'toggleAll' | 'itemEdit' | 'itemRemove' | ''itemToggle' | 'itemEditDone' | 'itemEditCancel' 
+	 * @param {*} handler 
+	 */
 	View.prototype.bind = function (event, handler) {
 		var self = this;
 		if (event === 'newTodo') {
