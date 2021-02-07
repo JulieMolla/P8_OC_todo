@@ -2,7 +2,8 @@
   "private": true,
   "scripts": {
     "start": "live-server", 
-    "test": "live-server --open=./test/SpecRunner.html --port=8081"
+    "test": "live-server --open=./test/SpecRunner.html --port=8081", 
+    "doc": "jsdoc -c jsdoc.json"
   },
   "dependencies": {
     "todomvc-common": "^1.0.1",

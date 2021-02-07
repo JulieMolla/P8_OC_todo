@@ -190,3 +190,8 @@ Plusieurs documentations sont demandés afin d'améliorer le projet:
 >Voir [la documentation utilisateur](./docs/images/manuel_utilisation.pdf)
 
 >Voir [la documentation technique](https://juliemolla.github.io/P8_OC_todo/jsdoc/app.html)
+
+**Pour générer la documentation technique ou la mettre à jour:**
+```
+npm run doc
+```
